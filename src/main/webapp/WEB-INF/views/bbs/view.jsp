@@ -22,8 +22,8 @@
 
 <div>
     <button type="button" onclick="location.href='/bbs/list'">리스트</button>
-    <button type="button" onclick="location.href='/bbs/modify?idx=1'">수정</button>
-    <button type="button" onclick="location.href='/bbs/delete?idx=1'">삭제</button>
+    <button type="button" onclick="location.href='/bbs/update?idx=${dto.idx}'">수정</button>
+    <button type="button" onclick="location.href='/bbs/delete?idx=${dto.idx}'">삭제</button>
 </div>
 </body>
 </html>
