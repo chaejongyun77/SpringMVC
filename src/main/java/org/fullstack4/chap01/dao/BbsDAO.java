@@ -1,6 +1,8 @@
 package org.fullstack4.chap01.dao;
 
 import lombok.Cleanup;
+import lombok.extern.java.Log;
+import lombok.extern.log4j.Log4j2;
 import org.fullstack4.chap01.domain.BbsVO;
 
 import java.sql.Connection;
@@ -9,6 +11,7 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
+@Log4j2
 public class BbsDAO {
 
     public String getTime(){
@@ -143,7 +146,8 @@ public class BbsDAO {
         return result;
     }
 
-    public void delete(int idx) throws Exception{
+    public int delete(int idx) throws Exception{
+
         StringBuilder sb = new StringBuilder();
         sb.append("DELETE FROM tbl_bbs WHERE no = ? ");
 
@@ -158,6 +162,7 @@ public class BbsDAO {
         System.out.println("BbsDAO >> delete(BbsVO vo ) : " + result );
         System.out.println("=====================");
 
+        return result;
     }
 
 }

@@ -48,8 +48,8 @@ public class BbsUpdateController extends HttpServlet {
         int[] check =new int[3];
 
         int idx =Integer.parseInt( req.getParameter("idx"));
-
-
+        //String idx = Integer.parseInt(req.getParameter("idx"));
+        //빈값이면 check[4]를 false로 , 만약 값이 있으면 Integer로 parsing하면됨
         String title = req.getParameter("title");
         check[0]  = commonUtils.requiredInput(title);
 
