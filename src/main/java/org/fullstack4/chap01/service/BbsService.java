@@ -66,7 +66,6 @@ public enum BbsService {
         return bbsDTO;
 
 
-
     }
     public int regist(BbsDTO bbsDTO) throws Exception{
 

@@ -7,6 +7,7 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
+import java.rmi.server.ExportException;
 
 @WebServlet(name = "BbsDeleteController", value = "/bbs/delete")
 public class BbsDeleteController extends HttpServlet {
@@ -18,8 +19,13 @@ public class BbsDeleteController extends HttpServlet {
 
        // check_flag = commonUtils.requiredInput(idx);
 
+        try {
+            resp.sendRedirect("/bbs/list");
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
 
-        resp.sendRedirect("/bbs/list");
     }
 
     @Override

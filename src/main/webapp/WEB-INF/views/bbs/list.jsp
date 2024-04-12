@@ -20,7 +20,12 @@
     <c:forEach var="bbsDto" items="${list}">
         <li><a href="/bbs/view?idx=${bbsDto.idx}">${bbsDto} </a></li>
 
-    </c:forEach>
+    </c:forEach>\
+
+    <h1> Listener</h1>
+    <h2>${appName}</h2>
+
+
 </ul>
 
 

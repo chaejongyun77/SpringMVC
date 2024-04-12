@@ -19,12 +19,13 @@ public class BbsViewController extends HttpServlet {
 
             BbsDTO dto = BbsService.INSTANCE.view(idx);
             req.setAttribute("dto",dto);
+            req.getRequestDispatcher("/WEB-INF/views/bbs/view.jsp").forward(req,resp);
 
         } catch (Exception e) {
            e.printStackTrace();
 
         }
-        req.getRequestDispatcher("/WEB-INF/views/bbs/view.jsp").forward(req,resp);
+
     }
 
     @Override
